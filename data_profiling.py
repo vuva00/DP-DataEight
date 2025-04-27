@@ -6,7 +6,7 @@ class DataProfiler:
     def __init__(self, file_name) -> None:
         self.file_name = file_name
         self.input_file_path = f'data/{file_name}'
-        self.output_dir = 'output'
+        self.output_dir = 'profiling_output'
         os.makedirs(self.output_dir, exist_ok=True)  # Create output folder if it doesn't exist
         self.df = self._load_data()
         self.report = self._create_report()
