@@ -1,0 +1,56 @@
+1. User Credits Analysis
+    Summary analysis:
+        N. of observations = 89911
+        Missing cells = 46199
+        ! Missing cells (%) = 8.6% - THIS NUMBER DOESNT MAKES SENSE. SHOULD NOT IT BE: (N. of observations)/(Missing cells)?
+
+    Variables:
+        user - There are no problem in my opinion. There are just users that appears frequent (stud56329, stud66006, stud87878) that could be good to analyse
+                - ! If this varaible is fully distinct how can there be a bigger value in the chart?
+        redits - problem:
+                - a lot of zeros (close to 50% of the whole dataset): could be porblematic in the model - bias
+                - there are 5 negative numbers - How can there be negative credits?
+        is_active - how do you define "active" user
+        is_verfied - how to define "verified" user
+        is_locked - what does this mean?
+        wage - categorical variable and based on the categories we assume that this is where users want to withdraw credits.
+                - A lot of missing!!!
+    
+    Correlation - high Correlation between is_active and is_verfied
+
+    ! there are few more issues that package identifies (such as skewed data) - view "Alerts" page in the report.
+
+2. Payments Analysis
+    Summary analysis:
+        N. of observations = 30087
+        Missing cells = 5024
+        missing cells (%) = 2.1% - I still dont understand how did we get to this number
+
+    Variables:
+        id  - there is one missing value!!!
+            - starts from number 30 (minor obstacle)
+        created_at - there is 1 not distict observation. Why?
+        changed_at - no issue
+        user - there are a lot of missing observations
+        batch
+            - what does this varaible says?
+            - some missing values
+        credits
+            - there is one missing observation (might be connected to the missing ID)
+            - large amount of Zeros! - how can be zero in payment? Minimum withdraw amount should be 500
+        state - in what state in the payment - PAID, CANCELLED, REQUEST, APPROVED
+            - one missing! (might be connected to the missing ID)
+            - uneven distributed in categories - might be an issues while modeling
+        type - where is payment paid to - same as "wage" in the user credits but in english
+            - one missing value
+
+    Correlation: small correletaions between state/type, state/id and credits/id - wherever "id" take place we assume that it is random correlation
+
+3. Atlas Cechu Analysis
+    Summary analysis:
+        N. of observations = 43533
+        Missing cells = 0
+        missing cells (%) = 0%
+    
+    Variables:
+        this has so many dummy variables. There is no way for me to write out all of them
