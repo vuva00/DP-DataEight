@@ -10,3 +10,5 @@ openpyxl
 xgboost==2.1.4
 imbalanced-learn
 tensorflow
+statsmodels
+shap
