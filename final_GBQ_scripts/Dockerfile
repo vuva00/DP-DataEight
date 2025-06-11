@@ -18,8 +18,8 @@ WORKDIR /app
 
 # Copy scripts and requirements
 COPY requirements.txt .
-COPY model_run_weekly.py .
-COPY model_train_run_monthly.py .
+COPY model_run_monthly.py .
+COPY model_train_run.py .
 
 # Install dependencies
 RUN pip install --upgrade pip && pip install -r requirements.txt

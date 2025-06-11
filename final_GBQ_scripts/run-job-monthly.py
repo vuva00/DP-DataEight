@@ -1,5 +1,5 @@
 # Example script to run a custom job on Google Cloud Vertex AI
-# This script initializes the Vertex AI environment and runs a custom job for weekly predictions using an XGBoost model.
+# This script initializes the Vertex AI environment and runs a custom job for monthly predictions using an XGBoost model.
 
 from google.cloud import aiplatform
 
